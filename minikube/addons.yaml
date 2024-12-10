@@ -37,8 +37,8 @@ spec:
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: qstart-app
-  namespace: flux-system
+  name: qstart
+  namespace: default
 spec:
   interval: 1m
   url: https://github.com/vrecon/qstart/
