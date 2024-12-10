@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 1m0s
   prune: true
-  path: ./
+  path: ./target/kubernetes  # Dit aanpassen naar waar Quarkus de manifests genereert
   sourceRef:
     kind: GitRepository
     name: qstart
