@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: qstart-app
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  prune: true
+  path: ./k8s
+  sourceRef:
+    kind: GitRepository
+    name: qstart-app
+  targetNamespace: qstart
