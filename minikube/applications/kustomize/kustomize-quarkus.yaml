@@ -1,13 +1,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: qstart
+  name: kustomize-quarkus
   namespace: flux-system
 spec:
   interval: 1m0s
   prune: true
-  path: ./target/kubernetes  # Dit aanpassen naar waar Quarkus de manifests genereert
+  path: ./kubernetes/overlays/development  # dit pad moet correct zijn
   sourceRef:
     kind: GitRepository
-    name: qstart
+    name: kustomize-quarkus
   targetNamespace: default

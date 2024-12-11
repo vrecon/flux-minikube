@@ -37,16 +37,14 @@ spec:
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: qstart
+  name: kustomize-quarkus
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/vrecon/qstart
+  url: https://github.com/vrecon/kustomize-quarkus
   ref:
     branch: main
   ignore: |
-    # exclude all
     /*
-    # include kubernetes manifests
-    !/target/kubernetes/
+    !/kubernetes/
 
